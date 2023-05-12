@@ -14,6 +14,20 @@ from utils.images import logo_encoded
 from components.login import login_info
 
 # component
+search_bar = dbc.Row(
+    [
+        dbc.Col(dbc.Input(type="search", placeholder="Search")),
+        dbc.Col(
+            dbc.Button(
+                "Search", color="primary", className="ms-2", n_clicks=0
+            ),
+            width="auto",
+        ),
+    ],
+    className="g-0 ms-auto flex-nowrap mt-3 mt-md-0",
+    align="center",
+)
+
 navbar = dbc.Navbar(
     dbc.Container(
         [
@@ -25,7 +39,7 @@ navbar = dbc.Navbar(
                     align='center',
                     className='g-0',
                 ),
-                href='https://plotly.com',
+                href='#',
                 style={'textDecoration': 'none'},
             ),
             dbc.NavbarToggler(id='navbar-toggler', n_clicks=0),
@@ -51,6 +65,12 @@ navbar = dbc.Navbar(
                 ),
                 id='navbar-collapse',
                 navbar=True
+            ),
+            dbc.Collapse(
+                search_bar,
+                id="navbar-search",
+                is_open=False,
+                navbar=True,
             ),
         ]
     ),

@@ -16,6 +16,8 @@ layout = html.Div(
             html.A('Checkout the complex page here.', href='/complex')
         ),
         html.A('/page2', href='/page2'),
+        html.Br(),
+        html.A('3D Network Graph', href='/test1'),
         dcc.RadioItems(
             id='radios',
             options=[{'label': i, 'value': i} for i in ['Orange', 'Blue', 'Red']],

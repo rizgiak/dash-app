@@ -12,11 +12,11 @@ footer = html.Footer(
     dbc.Container(
         [
             html.Hr(),
-            'Footer item 1',
-            html.Br(),
-            'Footer item 2',
-            html.Br(),
-            'Footer item 3'
+            '2023 Simulation Group',
+            # html.Br(),
+            # 'Footer item 2',
+            # html.Br(),
+            # 'Footer item 3'
         ]
     )
 )
