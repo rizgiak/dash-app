@@ -1,16 +1,31 @@
-# dash-app-structure
+# dash-app
 
  This repository is to demostrate some good practices for structuring a Dash app.
 
 ## Install and Setup
 
-For handling large apps, you'll want to make sure you are using a virtaul environment, so you can manage your packages properly.
+For handling large apps, you'll want to make sure you are using a virtual environment, so you can manage your packages properly.
 To create an environment, install requirements, and run the app, use the following:
 
 ```bash
 python -m venv .venv                            # create virtual environment
 .venv\Scripts\pip install -r requirements.txt   # install requirements
 .venv\Scripts\python src\app.py                 # run the application
+```
+
+When you're concerning to use `pipenv` instead `venv`.
+
+```
+pip install pipenv
+pipenv install
+cd src
+pipenv run python app.py
+```
+
+Write the changes from installing with: `pipenv install [packages]`
+
+```
+pipenv run pip freeze > requirements.txt
 ```
 
 ## Structure
